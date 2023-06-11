@@ -2,16 +2,9 @@
 
 int a = TakeUserNum();
 int b = TakeUserNum();
+int max = NumComparison(a, b);
 
-if(NumComparison(a, b))
-{
-    Console.WriteLine($"a = {a}; b = {b} -> max = {a}");
-}
-else
-{
-    Console.WriteLine($"a = {a}; b = {b} -> max = {b}");
-}
-
+Console.WriteLine($"a = {a}; b = {b} -> max = {max}");
 
 int TakeUserNum()
 {
@@ -25,10 +18,11 @@ int TakeUserNum()
     return userNum;
 }
 
-bool NumComparison(int a, int b)
+int NumComparison(int a, int b)
 {
-    if(a > b) 
-        return true;
-    else 
-        return false;
+    int max = a;
+
+    if(max < b) max = b;
+
+    return max;
 }
