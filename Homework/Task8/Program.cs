@@ -13,7 +13,7 @@ int TakeUserNum()
 {
     int userNum;
 
-    while(!int.TryParse(Console.ReadLine(), out userNum) || userNum < 2)
+    while(!int.TryParse(Console.ReadLine(), out userNum) | userNum < 2)
     {
         Console.WriteLine("Пожалуйста введите число!");
     }
