@@ -8,14 +8,10 @@
 
 Console.Clear();
 
-Console.ForegroundColor = ConsoleColor.Yellow;
 int value1 = TakeUserNum();
-Console.ForegroundColor = ConsoleColor.DarkGreen;
 int value2 = TakeUserNum();
 
-Console.ForegroundColor = ConsoleColor.Blue;
 Console.Write($"{value1}, {value2} -> ");
-Console.ForegroundColor = ConsoleColor.DarkRed;
 
 if(value1 * value1 == value2 | value2 * value2 == value1)
 {
