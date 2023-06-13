@@ -1,8 +1,8 @@
-﻿using Microsoft.CSharp.RuntimeBinder;
-// Задача 13: Напишите программу, которая выводит 
+﻿// Задача 13: Напишите программу, которая выводит 
 // третью цифру заданного числа или сообщает, что третьей 
 // цифры нет.
 
+Console.WriteLine("Пожалуйста введите число");
 int value = TakeUserNum();
 
 if(value < 100)
@@ -20,7 +20,6 @@ else
         if(value > 999)
         {
             value = value / 10;
-            Console.WriteLine(value);
         }
         else
         {
