@@ -5,24 +5,35 @@
 Console.WriteLine("Пожалуйста введите число");
 int value = TakeUserNum();
 
-if(value < 100)
+if(FindThirdNumber(value) == -1)
 {
     Console.WriteLine("третьей цифры нет");
 }
 else
 {
-    while(true)
+    Console.WriteLine($"{value % 10}");
+}
+
+int FindThirdNumber(int value)
+{
+    if(value < 100)
     {
-        if(value > 999)
+        return -1;
+    }
+    else
+    {
+        while(true)
         {
-            value = value / 10;
-        }
-        else
-        {
-            Console.WriteLine($"{value % 10}");
-            return;
+            if(value > 999)
+            {
+                value = value / 10;
+            }
+            else
+            {
+                return value % 10;
+            } 
         } 
-    } 
+    }
 }
 
 int TakeUserNum()
@@ -34,5 +45,5 @@ int TakeUserNum()
         Console.WriteLine("Пожалуйста введите число!");
     }
 
-    return userNum;
+    return Math.Abs(userNum);
 }
