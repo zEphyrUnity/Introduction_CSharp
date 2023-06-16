@@ -1,6 +1,7 @@
 ﻿//Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
 
 int quarter = TakeUserNum();
+FindQuarter(quarter);
 
 void FindQuarter(int quarter)
 {
