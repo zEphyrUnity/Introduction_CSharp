@@ -3,6 +3,23 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+int A = TakeUserNum();
+int B = TakeUserNum();
+int power = NumPower(A, B);
+
+Console.WriteLine($"{A}, {B} -> {power}");
+
+
+int NumPower(int A, int B)
+{
+    int numPower = A;
+
+    for(int i = 2; i <= B; i++)
+        numPower *= A;
+
+    return numPower;
+}
+
 int TakeUserNum()
 {
     int userNum;
