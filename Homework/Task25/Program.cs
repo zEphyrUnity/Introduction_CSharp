@@ -3,19 +3,19 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-int A = TakeUserNum();
-int B = TakeUserNum();
-int power = NumPower(A, B);
+int number = TakeUserNum();
+int power = TakeUserNum();
+int numPower = NumPower(number, power);
 
-Console.WriteLine($"{A}, {B} -> {power}");
+Console.WriteLine($"{number}, {power} -> {numPower}");
 
 
-int NumPower(int A, int B)
+int NumPower(int number, int exponent)
 {
-    int numPower = A;
+    int numPower = number;
 
-    for(int i = 2; i <= B; i++)
-        numPower *= A;
+    for(int i = 2; i <= exponent; i++)
+        numPower *= number;
 
     return numPower;
 }
