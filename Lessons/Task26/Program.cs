@@ -5,15 +5,15 @@
 // 89126 -> 5
 
 int userNum = TakeUserNum();
-
-Console.WriteLine(CountNum(userNum));
+int counter = CountNum(userNum);
+Console.WriteLine(counter);
 
 
 int CountNum(int userNum)
 {
     int i = 0;
 
-    while(userNum > 1)
+    while(userNum >= 1)
     {
         userNum /= 10;
         i++;
