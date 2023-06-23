@@ -6,7 +6,7 @@
 
 int[] array = RandomArray();
 PrintArray(array);
-Console.WriteLine(OddCount(array));
+Console.WriteLine($" -> {OddCount(array)}");
 
 int OddCount(int[] array)
 {
@@ -20,10 +20,15 @@ int OddCount(int[] array)
 
 void PrintArray(int[] array)
 {
-    foreach(var element in array)
-        Console.Write($"{element} ");
-
-    Console.WriteLine();
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(i == 0)
+            Console.Write($"[{array[i]}, ");
+        else if(i != array.Length - 1)
+            Console.Write($"{array[i]}, "); 
+        else
+            Console.Write($"{array[i]}]"); 
+    }
 }
 
 int[] RandomArray()

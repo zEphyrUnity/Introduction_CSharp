@@ -6,7 +6,7 @@
 
 int[] array = RandomArray();
 PrintArray(array);
-Console.WriteLine(OddPositionSum(array));
+Console.WriteLine($" -> {OddPositionSum(array)}");
 
 int OddPositionSum(int[] array)
 {
@@ -20,10 +20,15 @@ int OddPositionSum(int[] array)
 
 void PrintArray(int[] array)
 {
-    foreach(var element in array)
-        Console.Write($"{element} ");
-
-    Console.WriteLine();
+    for(int i = 0; i < array.Length; i++)
+    {
+        if(i == 0)
+            Console.Write($"[{array[i]}, ");
+        else if(i != array.Length - 1)
+            Console.Write($"{array[i]}, "); 
+        else
+            Console.Write($"{array[i]}]"); 
+    }
 }
 
 int[] RandomArray()
@@ -32,7 +37,7 @@ int[] RandomArray()
     Random random = new Random();
 
     for(int i = 0; i < array.Length; i++)
-        array[i] = random.Next(100, 1000);
+        array[i] = random.Next(0, 100);
 
     return array;
 }
