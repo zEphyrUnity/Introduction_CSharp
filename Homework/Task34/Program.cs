@@ -20,15 +20,7 @@ int OddCount(int[] array)
 
 void PrintArray(int[] array)
 {
-    for(int i = 0; i < array.Length; i++)
-    {
-        if(i == 0)
-            Console.Write($"[{array[i]}, ");
-        else if(i != array.Length - 1)
-            Console.Write($"{array[i]}, "); 
-        else
-            Console.Write($"{array[i]}]"); 
-    }
+    Console.Write($"[{string.Join(", ", array)}]");
 }
 
 int[] RandomArray()

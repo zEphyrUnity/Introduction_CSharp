@@ -10,24 +10,8 @@ PrintArrayHard(randomArray);
 
 void PrintArrayHard(int[] array)
 {
-    foreach(var (value, i) in array.Select((value, i) => (value, i)))
-    {
-        if(i != array.Length - 1)
-            Console.Write($"{value}, ");
-        else
-            Console.Write($"{value} -> ");
-    }
-
-    foreach(var (value, i) in array.Select((value, i) => (value, i)))
-    {
-        if(i == 0)
-            Console.Write($"[{value}, ");
-        else if(i != array.Length - 1)
-            Console.Write($"{value}, "); 
-        else
-            Console.Write($"{value}]"); 
-    }
-
+    Console.Write($"{string.Join(", ", array)} -> ");
+    Console.Write($"[{string.Join(", ", array)}]");
     Console.WriteLine();
 }
 
