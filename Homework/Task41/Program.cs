@@ -4,11 +4,11 @@
 
 const int M = 5;
 
-int[] arrayNum = TakeArrayNum(M);
-int counter = CheckPositive(arrayNum);
+int[] userArray = TakeUserArray(M);
+int counter = CheckPositive(userArray);
 
 Console.Clear();
-Console.WriteLine($"{string.Join(", ", arrayNum)} -> {counter}");
+Console.WriteLine($"{string.Join(", ", userArray)} -> {counter}");
 
 
 int CheckPositive(int[] array)
@@ -21,7 +21,7 @@ int CheckPositive(int[] array)
     return counter;
 }
 
-int[] TakeArrayNum(int M)
+int[] TakeUserArray(int M)
 {
     int[] array = new int[M];
 
